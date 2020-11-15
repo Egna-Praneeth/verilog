@@ -1,0 +1,77 @@
+$date
+	Thu Sep 17 15:43:05 2020
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module bcdtogrey_gate $end
+$var wire 4 ! in [0:3] $end
+$var wire 4 " out [0:3] $end
+$upscope $end
+$scope module testbench $end
+$var wire 4 # out [0:3] $end
+$var reg 4 $ in [0:3] $end
+$scope module g $end
+$var wire 4 % in [0:3] $end
+$var wire 4 & out [0:3] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+b0 &
+b0 %
+b0 $
+b0 #
+bzxxx "
+bz !
+$end
+#3
+b1 #
+b1 &
+b1 $
+b1 %
+#6
+b11 #
+b11 &
+b10 $
+b10 %
+#9
+b10 #
+b10 &
+b11 $
+b11 %
+#12
+b110 #
+b110 &
+b100 $
+b100 %
+#15
+b111 #
+b111 &
+b101 $
+b101 %
+#18
+b101 #
+b101 &
+b110 $
+b110 %
+#21
+b100 #
+b100 &
+b111 $
+b111 %
+#24
+b1100 #
+b1100 &
+b1000 $
+b1000 %
+#27
+b1101 #
+b1101 &
+b1001 $
+b1001 %
+#33

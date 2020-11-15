@@ -1,0 +1,57 @@
+#! c:/iverilog-x86/bin/vvp
+:ivl_version "10.0 (stable)" "(v10_0)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision + 0;
+:vpi_module "system";
+:vpi_module "vhdl_sys";
+:vpi_module "v2005_math";
+:vpi_module "va_math";
+S_00904778 .scope module, "testbench" "testbench" 2 3;
+ .timescale 0 0;
+v00903ad8_0 .var "a", 0 0;
+v00903b30_0 .var "b", 0 0;
+v00903b88_0 .net "c", 0 0, L_0090a148;  1 drivers
+S_00903a08 .scope module, "comp" "some_logic_component" 2 7, 3 1 0, S_00904778;
+ .timescale 0 0;
+    .port_info 0 /OUTPUT 1 "c"
+    .port_info 1 /INPUT 1 "a"
+    .port_info 2 /INPUT 1 "b"
+L_0090a100 .functor AND 1, v00903ad8_0, v00903b30_0, C4<1>, C4<1>;
+L_0090a148 .functor NOT 1, L_0090a100, C4<0>, C4<0>, C4<0>;
+v0090a370_0 .net "a", 0 0, v00903ad8_0;  1 drivers
+v00904848_0 .net "b", 0 0, v00903b30_0;  1 drivers
+v0090ef30_0 .net "c", 0 0, L_0090a148;  alias, 1 drivers
+v0090ef88_0 .net "d", 0 0, L_0090a100;  1 drivers
+    .scope S_00904778;
+T_0 ;
+    %vpi_call 2 10 "$monitor", " ", $time, " a = %b, b = %b, c = %b", v00903ad8_0, v00903b30_0, v00903b88_0 {0 0 0};
+    %delay 0, 0;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v00903ad8_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v00903b30_0, 0, 1;
+    %delay 2, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v00903ad8_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v00903b30_0, 0, 1;
+    %delay 5, 0;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v00903ad8_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v00903b30_0, 0, 1;
+    %delay 10, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v00903ad8_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v00903b30_0, 0, 1;
+    %delay 20, 0;
+    %vpi_call 2 15 "$finish" {0 0 0};
+    %end;
+    .thread T_0;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "tb_nand.v";
+    "./nand.v";

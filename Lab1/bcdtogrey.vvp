@@ -1,0 +1,71 @@
+#! c:/iverilog-x86/bin/vvp
+:ivl_version "10.0 (stable)" "(v10_0)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision + 0;
+:vpi_module "system";
+:vpi_module "vhdl_sys";
+:vpi_module "v2005_math";
+:vpi_module "va_math";
+S_011b3a08 .scope module, "bcdtogrey_df" "bcdtogrey_df" 2 12;
+ .timescale 0 0;
+    .port_info 0 /INPUT 4 "in"
+    .port_info 1 /OUTPUT 4 "out"
+L_011b4fe0 .functor XOR 1, L_028258d0, L_02825610, C4<0>, C4<0>;
+L_011becb0 .functor XOR 1, L_02825928, L_02825668, C4<0>, C4<0>;
+L_011becf8 .functor XOR 1, L_028256c0, L_028259d8, C4<0>, C4<0>;
+v011b4e38_0 .net *"_s10", 0 0, L_011b4fe0;  1 drivers
+v011b4e90_0 .net *"_s15", 0 0, L_02825928;  1 drivers
+v011b4ee8_0 .net *"_s17", 0 0, L_02825668;  1 drivers
+v011b4f40_0 .net *"_s18", 0 0, L_011becb0;  1 drivers
+v02825118_0 .net *"_s24", 0 0, L_028256c0;  1 drivers
+v02825010_0 .net *"_s26", 0 0, L_028259d8;  1 drivers
+v02825278_0 .net *"_s27", 0 0, L_011becf8;  1 drivers
+v028252d0_0 .net *"_s3", 0 0, L_02824eb0;  1 drivers
+v02825170_0 .net *"_s7", 0 0, L_028258d0;  1 drivers
+v02825220_0 .net *"_s9", 0 0, L_02825610;  1 drivers
+o028040dc .functor BUFZ 4, C4<zzzz>; HiZ drive
+v02824f60_0 .net "in", 0 3, o028040dc;  0 drivers
+v02825328_0 .net "out", 0 3, L_02825c98;  1 drivers
+L_02824eb0 .part o028040dc, 3, 1;
+L_028258d0 .part o028040dc, 3, 1;
+L_02825610 .part o028040dc, 2, 1;
+L_02825928 .part o028040dc, 2, 1;
+L_02825668 .part o028040dc, 1, 1;
+L_02825c98 .concat8 [ 1 1 1 1], L_011becf8, L_011becb0, L_011b4fe0, L_02824eb0;
+L_028256c0 .part o028040dc, 1, 1;
+L_028259d8 .part o028040dc, 0, 1;
+S_011b3ad8 .scope module, "bcdtogrey_gate" "bcdtogrey_gate" 2 1;
+ .timescale 0 0;
+    .port_info 0 /INPUT 4 "in"
+    .port_info 1 /OUTPUT 4 "out"
+L_011bed40 .functor BUF 1, L_02825be8, C4<0>, C4<0>, C4<0>;
+L_011bed88 .functor XOR 1, L_02825c40, L_02825cf0, C4<0>, C4<0>;
+L_011bedd0 .functor XOR 1, L_02825a30, L_02825718, C4<0>, C4<0>;
+L_011bee80 .functor XOR 1, L_02825ae0, L_02825770, C4<0>, C4<0>;
+v02824f08_0 .net *"_s0", 0 0, L_011bed40;  1 drivers
+v02824fb8_0 .net *"_s10", 0 0, L_011bedd0;  1 drivers
+v02825380_0 .net *"_s13", 0 0, L_02825a30;  1 drivers
+v02824c48_0 .net *"_s15", 0 0, L_02825718;  1 drivers
+v02824d50_0 .net *"_s16", 0 0, L_011bee80;  1 drivers
+v02824ca0_0 .net *"_s20", 0 0, L_02825ae0;  1 drivers
+v02825068_0 .net *"_s22", 0 0, L_02825770;  1 drivers
+v028250c0_0 .net *"_s3", 0 0, L_02825be8;  1 drivers
+v028251c8_0 .net *"_s4", 0 0, L_011bed88;  1 drivers
+v02824cf8_0 .net *"_s7", 0 0, L_02825c40;  1 drivers
+v02824da8_0 .net *"_s9", 0 0, L_02825cf0;  1 drivers
+o02804244 .functor BUFZ 4, C4<zzzz>; HiZ drive
+v02824e00_0 .net "in", 0 3, o02804244;  0 drivers
+v02824e58_0 .net "out", 0 3, L_02825d48;  1 drivers
+L_02825be8 .part o02804244, 3, 1;
+L_02825c40 .part o02804244, 3, 1;
+L_02825cf0 .part o02804244, 2, 1;
+L_02825a30 .part o02804244, 2, 1;
+L_02825718 .part o02804244, 1, 1;
+L_02825d48 .concat8 [ 1 1 1 1], L_011bee80, L_011bedd0, L_011bed88, L_011bed40;
+L_02825ae0 .part o02804244, 1, 1;
+L_02825770 .part o02804244, 0, 1;
+# The file index is used to find the file name in the following table.
+:file_names 3;
+    "N/A";
+    "<interactive>";
+    "bcdtogrey.v";

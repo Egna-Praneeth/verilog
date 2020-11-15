@@ -1,0 +1,473 @@
+$date
+	Thu Sep 24 10:55:58 2020
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module fadder_1bit_gate $end
+$var wire 1 ! A $end
+$var wire 1 " B $end
+$var wire 1 # Cin $end
+$var wire 1 $ Cout $end
+$var wire 1 % S $end
+$var wire 1 & ab $end
+$var wire 1 ' cab $end
+$var wire 1 ( xab $end
+$upscope $end
+$scope module mux2to1_df $end
+$var wire 1 ) a $end
+$var wire 1 * b $end
+$var wire 1 + s $end
+$var wire 1 , f $end
+$upscope $end
+$scope module tb_addsubt $end
+$var wire 4 - S [0:3] $end
+$var wire 1 . Cout $end
+$var reg 4 / A [0:3] $end
+$var reg 4 0 B [0:3] $end
+$var reg 1 1 Cin $end
+$scope module f $end
+$var wire 4 2 A [0:3] $end
+$var wire 4 3 B [0:3] $end
+$var wire 1 4 Cin $end
+$var wire 1 1 Sel $end
+$var wire 4 5 nB [0:3] $end
+$var wire 4 6 f [0:3] $end
+$var wire 4 7 S [0:3] $end
+$var wire 1 . Cout $end
+$scope module f1 $end
+$var wire 4 8 A [0:3] $end
+$var wire 4 9 B [0:3] $end
+$var wire 1 1 Cin $end
+$var wire 1 : c3 $end
+$var wire 1 ; c2 $end
+$var wire 1 < c1 $end
+$var wire 4 = S [0:3] $end
+$var wire 1 . Cout $end
+$scope module f1 $end
+$var wire 1 > A $end
+$var wire 1 ? B $end
+$var wire 1 1 Cin $end
+$var wire 1 < Cout $end
+$var wire 1 @ S $end
+$upscope $end
+$scope module f2 $end
+$var wire 1 A A $end
+$var wire 1 B B $end
+$var wire 1 < Cin $end
+$var wire 1 ; Cout $end
+$var wire 1 C S $end
+$upscope $end
+$scope module f3 $end
+$var wire 1 D A $end
+$var wire 1 E B $end
+$var wire 1 ; Cin $end
+$var wire 1 : Cout $end
+$var wire 1 F S $end
+$upscope $end
+$scope module f4 $end
+$var wire 1 G A $end
+$var wire 1 H B $end
+$var wire 1 : Cin $end
+$var wire 1 . Cout $end
+$var wire 1 I S $end
+$upscope $end
+$upscope $end
+$scope module m $end
+$var wire 1 J a $end
+$var wire 1 K b $end
+$var wire 1 L c $end
+$var wire 1 M d $end
+$var wire 1 N e $end
+$var wire 1 O f $end
+$var wire 1 1 s $end
+$upscope $end
+$scope module m1 $end
+$var wire 1 P a $end
+$var wire 1 Q b $end
+$var wire 1 R c $end
+$var wire 1 S d $end
+$var wire 1 T e $end
+$var wire 1 U f $end
+$var wire 1 1 s $end
+$upscope $end
+$scope module m2 $end
+$var wire 1 V a $end
+$var wire 1 W b $end
+$var wire 1 X c $end
+$var wire 1 Y d $end
+$var wire 1 Z e $end
+$var wire 1 [ f $end
+$var wire 1 1 s $end
+$upscope $end
+$scope module m3 $end
+$var wire 1 \ a $end
+$var wire 1 ] b $end
+$var wire 1 ^ c $end
+$var wire 1 _ d $end
+$var wire 1 ` e $end
+$var wire 1 a f $end
+$var wire 1 1 s $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope module testbench $end
+$var wire 1 b f $end
+$var reg 1 c a $end
+$var reg 1 d b $end
+$var reg 1 e s $end
+$scope module mux_gate $end
+$var wire 1 c a $end
+$var wire 1 d b $end
+$var wire 1 e s $end
+$var reg 1 b f $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+xe
+1d
+0c
+1b
+0a
+1`
+0_
+0^
+1]
+0\
+0[
+1Z
+0Y
+0X
+1W
+0V
+0U
+1T
+0S
+0R
+1Q
+0P
+0O
+1N
+0M
+0L
+1K
+0J
+0I
+0H
+0G
+0F
+0E
+0D
+0C
+0B
+0A
+0@
+0?
+0>
+b0 =
+0<
+0;
+0:
+b0 9
+b0 8
+b0 7
+b0 6
+b1111 5
+z4
+b0 3
+b0 2
+01
+b0 0
+b0 /
+0.
+b0 -
+z,
+z+
+z*
+z)
+x(
+x'
+x&
+x%
+x$
+z#
+z"
+z!
+$end
+#2
+1e
+#3
+b1 -
+b1 7
+b1 =
+1@
+1>
+b1 /
+b1 2
+b1 8
+#6
+1C
+b10 -
+b10 7
+b10 =
+0@
+1<
+1?
+0]
+b1 6
+b1 9
+1a
+b1110 5
+1^
+1\
+b1 0
+b1 3
+#7
+0b
+0e
+#9
+1.
+1:
+1;
+0I
+0F
+0C
+0?
+1H
+1E
+1B
+0a
+1O
+1U
+b1110 6
+b1110 9
+1[
+0^
+b0 -
+b0 7
+b0 =
+0@
+0N
+1M
+0T
+1S
+0Z
+1Y
+0`
+11
+#12
+1.
+0I
+1:
+0E
+1?
+1;
+0U
+b1011 6
+b1011 9
+1a
+0C
+0S
+1_
+1<
+0Q
+1]
+0@
+b0 -
+b0 7
+b0 =
+0F
+b1011 5
+1P
+0\
+0>
+1D
+b100 0
+b100 3
+b100 /
+b100 2
+b100 8
+#15
+0;
+1C
+0:
+0B
+0K
+1Q
+0]
+0F
+0I
+b1001 6
+b1001 9
+0[
+b110 5
+1L
+1^
+b10 -
+b10 7
+b10 =
+0@
+1N
+0M
+1T
+1Z
+0Y
+1`
+0_
+1J
+0P
+1\
+1>
+0D
+1G
+01
+b1001 0
+b1001 3
+b1001 /
+b1001 2
+b1001 8
+#17
+1b
+0d
+1c
+#18
+1I
+0.
+0H
+0C
+1K
+b1 6
+b1 9
+0O
+b1001 -
+b1001 7
+b1001 =
+1@
+0<
+b1110 5
+0L
+0J
+0>
+b1 0
+b1 3
+b1000 /
+b1000 2
+b1000 8
+#21
+1;
+1F
+1_
+1?
+0C
+1H
+0E
+1B
+0Q
+1]
+1a
+1I
+1<
+1O
+0U
+b1011 6
+b1011 9
+1[
+b1011 5
+0^
+b1101 -
+b1101 7
+b1101 =
+1@
+0N
+1M
+0T
+0S
+0Z
+1Y
+0`
+1P
+0\
+1>
+0G
+11
+b100 0
+b100 3
+b1 /
+b1 2
+b1 8
+#24
+1:
+0H
+0B
+1Q
+0]
+0C
+0F
+0O
+b1 6
+b1 9
+0[
+b1110 5
+1^
+b1000 -
+b1000 7
+b1000 =
+0@
+1N
+0M
+1T
+1Z
+0Y
+1`
+0_
+0P
+1\
+1A
+1D
+01
+b1 0
+b1 3
+b111 /
+b111 2
+b111 8
+#27
+1F
+1C
+1H
+1E
+1B
+1.
+0K
+0Q
+0W
+1O
+1U
+b1111 6
+b1111 9
+1[
+b1110 -
+b1110 7
+b1110 =
+1I
+b0 5
+1L
+1R
+1X
+1J
+1P
+1V
+1G
+b1111 0
+b1111 3
+b1111 /
+b1111 2
+b1111 8
+#32
+0b
+1e
+#33

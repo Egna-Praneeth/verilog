@@ -1,0 +1,71 @@
+$date
+	Thu Sep 03 13:20:51 2020
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module mux2to1_df $end
+$var wire 1 ! a $end
+$var wire 1 " b $end
+$var wire 1 # s $end
+$var wire 1 $ f $end
+$upscope $end
+$scope module mux2to1_gate $end
+$var wire 1 % a $end
+$var wire 1 & b $end
+$var wire 1 ' c $end
+$var wire 1 ( d $end
+$var wire 1 ) e $end
+$var wire 1 * f $end
+$var wire 1 + s $end
+$upscope $end
+$scope module testbench $end
+$var wire 1 , f $end
+$var reg 1 - a $end
+$var reg 1 . b $end
+$var reg 1 / s $end
+$scope module mux_gate $end
+$var wire 1 - a $end
+$var wire 1 . b $end
+$var wire 1 / s $end
+$var reg 1 , f $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+x/
+1.
+0-
+1,
+z+
+x*
+z)
+x(
+x'
+z&
+z%
+z$
+z#
+z"
+z!
+$end
+#2
+1/
+#7
+0,
+0/
+#17
+1,
+0.
+1-
+#32
+0,
+1/
+#52
+1,
+0/
+#152
