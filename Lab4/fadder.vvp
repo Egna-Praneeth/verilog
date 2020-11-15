@@ -1,0 +1,79 @@
+#! c:/iverilog-x86/bin/vvp
+:ivl_version "10.0 (stable)" "(v10_0)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision + 0;
+:vpi_module "system";
+:vpi_module "vhdl_sys";
+:vpi_module "v2005_math";
+:vpi_module "va_math";
+S_010b4a10 .scope module, "tb_fa" "tb_fa" 2 18;
+ .timescale 0 0;
+v028902a8_0 .var "cin", 0 0;
+v028900f0_0 .net "cout", 0 0, L_0288fd28;  1 drivers
+v02890408_0 .var "in1", 31 0;
+v0288ffe8_0 .var "in2", 31 0;
+v02890148_0 .net "sum", 31 0, L_02890040;  1 drivers
+S_010b4ae0 .scope module, "f1" "FA_dataflow" 2 23, 2 2 0, S_010b4a10;
+ .timescale 0 0;
+    .port_info 0 /OUTPUT 1 "Cout"
+    .port_info 1 /OUTPUT 32 "Sum"
+    .port_info 2 /INPUT 32 "in1"
+    .port_info 3 /INPUT 32 "in2"
+    .port_info 4 /INPUT 1 "Cin"
+v010b7de0_0 .net "Cin", 0 0, v028902a8_0;  1 drivers
+v010b3a08_0 .net "Cout", 0 0, L_0288fd28;  alias, 1 drivers
+v010b3a60_0 .net "Sum", 31 0, L_02890040;  alias, 1 drivers
+L_028b8c40 .functor BUFT 1, C4<0>, C4<0>, C4<0>, C4<0>;
+v010b3ab8_0 .net *"_s10", 0 0, L_028b8c40;  1 drivers
+v010b3b10_0 .net *"_s11", 32 0, L_028901a0;  1 drivers
+v010b3b68_0 .net *"_s13", 32 0, L_028901f8;  1 drivers
+L_028b8c68 .functor BUFT 1, C4<00000000000000000000000000000000>, C4<0>, C4<0>, C4<0>;
+v010bea60_0 .net *"_s16", 31 0, L_028b8c68;  1 drivers
+v010beab8_0 .net *"_s17", 32 0, L_02890250;  1 drivers
+v010beb10_0 .net *"_s3", 32 0, L_02890098;  1 drivers
+L_028b8c18 .functor BUFT 1, C4<0>, C4<0>, C4<0>, C4<0>;
+v010beb68_0 .net *"_s6", 0 0, L_028b8c18;  1 drivers
+v010bebc0_0 .net *"_s7", 32 0, L_0288fcd0;  1 drivers
+v010bec18_0 .net "in1", 31 0, v02890408_0;  1 drivers
+v028903b0_0 .net "in2", 31 0, v0288ffe8_0;  1 drivers
+L_0288fd28 .part L_02890250, 32, 1;
+L_02890040 .part L_02890250, 0, 32;
+L_02890098 .concat [ 32 1 0 0], v02890408_0, L_028b8c18;
+L_0288fcd0 .concat [ 32 1 0 0], v0288ffe8_0, L_028b8c40;
+L_028901a0 .arith/sum 33, L_02890098, L_0288fcd0;
+L_028901f8 .concat [ 1 32 0 0], v028902a8_0, L_028b8c68;
+L_02890250 .arith/sum 33, L_028901a0, L_028901f8;
+    .scope S_010b4a10;
+T_0 ;
+    %vpi_call 2 25 "$monitor", "in1 = %b, in2 = %b, cin = %b, cout = %b, sum=%b", v02890408_0, v0288ffe8_0, v028902a8_0, v028900f0_0, v02890148_0 {0 0 0};
+    %end;
+    .thread T_0;
+    .scope S_010b4a10;
+T_1 ;
+    %pushi/vec4 0, 0, 32;
+    %store/vec4 v02890408_0, 0, 32;
+    %pushi/vec4 1, 0, 32;
+    %store/vec4 v0288ffe8_0, 0, 32;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v028902a8_0, 0, 1;
+    %delay 10, 0;
+    %pushi/vec4 1, 0, 32;
+    %store/vec4 v02890408_0, 0, 32;
+    %pushi/vec4 2, 0, 32;
+    %store/vec4 v0288ffe8_0, 0, 32;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v028902a8_0, 0, 1;
+    %delay 20, 0;
+    %pushi/vec4 4294967295, 0, 32;
+    %store/vec4 v02890408_0, 0, 32;
+    %pushi/vec4 0, 0, 32;
+    %store/vec4 v0288ffe8_0, 0, 32;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v028902a8_0, 0, 1;
+    %end;
+    .thread T_1;
+# The file index is used to find the file name in the following table.
+:file_names 3;
+    "N/A";
+    "<interactive>";
+    "fadder.v";
