@@ -1,0 +1,102 @@
+#! c:/iverilog-x86/bin/vvp
+:ivl_version "10.0 (stable)" "(v10_0)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision + 0;
+:vpi_module "system";
+:vpi_module "vhdl_sys";
+:vpi_module "v2005_math";
+:vpi_module "va_math";
+S_009e8a90 .scope module, "shiftregtest" "shiftregtest" 2 19;
+ .timescale 0 0;
+P_027d33a0 .param/l "n" 0 2 21, +C4<00000000000000000000000000000100>;
+v009e5128_0 .var "CLK", 0 0;
+v009e5180_0 .var "EN", 0 0;
+v009e51d8_0 .var "I", 3 0;
+v009e5230_0 .net "Q", 3 0, v009e3b30_0;  1 drivers
+v009e5288_0 .var "in", 0 0;
+S_009e3a08 .scope module, "shreg" "shiftreg" 2 27, 2 1 0, S_009e8a90;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "EN"
+    .port_info 1 /INPUT 4 "I"
+    .port_info 2 /INPUT 1 "in"
+    .port_info 3 /INPUT 1 "CLK"
+    .port_info 4 /OUTPUT 4 "Q"
+P_027d3418 .param/l "n" 0 2 2, +C4<00000000000000000000000000000100>;
+v009e3f68_0 .net "CLK", 0 0, v009e5128_0;  1 drivers
+v009e8b60_0 .net "EN", 0 0, v009e5180_0;  1 drivers
+v009e3ad8_0 .net "I", 3 0, v009e51d8_0;  1 drivers
+v009e3b30_0 .var "Q", 3 0;
+v009e3b88_0 .net "in", 0 0, v009e5288_0;  1 drivers
+E_027d32b0 .event posedge, v009e3f68_0;
+    .scope S_009e3a08;
+T_0 ;
+    %load/vec4 v009e3ad8_0;
+    %cassign/vec4 v009e3b30_0;
+    %cassign/link v009e3b30_0, v009e3ad8_0;
+    %end;
+    .thread T_0;
+    .scope S_009e3a08;
+T_1 ;
+    %wait E_027d32b0;
+    %load/vec4 v009e8b60_0;
+    %flag_set/vec4 8;
+    %jmp/0xz  T_1.0, 8;
+    %load/vec4 v009e3b88_0;
+    %load/vec4 v009e3b30_0;
+    %parti/s 3, 1, 2;
+    %concat/vec4; draw_concat_vec4
+    %store/vec4 v009e3b30_0, 0, 4;
+T_1.0 ;
+    %jmp T_1;
+    .thread T_1;
+    .scope S_009e8a90;
+T_2 ;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v009e5128_0, 0, 1;
+    %end;
+    .thread T_2;
+    .scope S_009e8a90;
+T_3 ;
+    %delay 2, 0;
+    %load/vec4 v009e5128_0;
+    %inv;
+    %store/vec4 v009e5128_0, 0, 1;
+    %jmp T_3;
+    .thread T_3;
+    .scope S_009e8a90;
+T_4 ;
+    %vpi_call 2 37 "$monitor", $time, " EN=%b in= %b, I=%b,  Q=%b\012", v009e5180_0, v009e5288_0, v009e51d8_0, v009e5230_0 {0 0 0};
+    %end;
+    .thread T_4;
+    .scope S_009e8a90;
+T_5 ;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v009e5288_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v009e5180_0, 0, 1;
+    %pushi/vec4 0, 0, 4;
+    %store/vec4 v009e51d8_0, 0, 4;
+    %delay 4, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v009e5288_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v009e5180_0, 0, 1;
+    %delay 4, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v009e5288_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v009e5180_0, 0, 1;
+    %delay 4, 0;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v009e5288_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v009e5180_0, 0, 1;
+    %delay 5, 0;
+    %vpi_call 2 44 "$finish" {0 0 0};
+    %end;
+    .thread T_5;
+# The file index is used to find the file name in the following table.
+:file_names 3;
+    "N/A";
+    "<interactive>";
+    "shiftreg.v";
